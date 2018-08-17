@@ -1,0 +1,32 @@
+entity Camp {
+	name String,
+    phone String
+}
+
+ 
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	mapLocation String
+}
+
+ 
+entity Requirement {
+	 
+	item String,
+	quantity Long
+}
+ 
+relationship OneToOne {
+	Camp{location} to Location
+}
+
+relationship OneToMany {
+	Camp{item} to Requirement
+	 
+}
+
+service all with serviceImpl
+
+angularSuffix * with kerala-rescue
