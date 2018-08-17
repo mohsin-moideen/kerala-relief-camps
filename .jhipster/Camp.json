@@ -1,0 +1,39 @@
+{
+    "name": "Camp",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "location",
+            "otherEntityName": "location",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "camp"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "item",
+            "otherEntityName": "requirement",
+            "otherEntityRelationshipName": "camp"
+        }
+    ],
+    "changelogDate": "20180817181039",
+    "entityTableName": "camp",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "kerala-rescue"
+}
